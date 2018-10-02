@@ -1,0 +1,30 @@
+<MainBox>:
+	RelativeLayout:
+		size_hint: (1, .05)
+		ReloadButton:
+			id: reload
+			text: 'Reload'
+			pos_hint: {'left': 0}
+			size_hint: (0.1, 1)
+			textRead: inputkv
+			textWrite: outputkv
+			errorWrite: errorout
+
+		ErrorOut:
+			id: errorout
+			halign: 'left'
+			valign: 'middle'
+			text_size: self.size
+			text: 'Nista kompajlirano' #ovo je opet test prokleto dugacke kurcine od teksta koja je tolko dugacka da je predugacka'
+			shorten: True
+			padding: [10, 0]
+			pos_hint: {'x': 0.5}
+			size_hint: (0.5, 1)
+
+	BoxLayout:
+		size_hint: (1, 1)
+		orientation: 'horizontal'
+		KVinputText:
+			id: inputkv
+		KVoutput:
+			id: outputkv
